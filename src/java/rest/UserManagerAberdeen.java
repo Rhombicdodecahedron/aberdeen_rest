@@ -21,6 +21,7 @@ import javax.ws.rs.core.MediaType;
  * @author StellaA
  * @version 1.0
  * @project Aberdeen module 133
+ * @since 06.05.2021
  */
 @Path("ABERDEEN")
 public class UserManagerAberdeen {
