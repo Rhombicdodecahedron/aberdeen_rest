@@ -1,6 +1,7 @@
 package wrk;
 
 import beans.Utilisateur;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,8 +9,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
+ * Classe WrkDB
+ * Cette classe permet de contacter et faire les requêtes vers la base de données.
  *
  * @author StellaA
+ * @version 1.0
+ * @project Aberdeen module 133
  */
 public class WrkDB {
 
@@ -19,7 +24,7 @@ public class WrkDB {
     private Connection jdbcConnection;
 
     /**
-     * Constructeur de la classe WrkDB de l'état-major. Il définit la variable
+     * Constructeur de la classe WrkDB de l'état-major. Il défini la variable
      * jdbcConnection à null.
      */
     public WrkDB() {
@@ -27,16 +32,15 @@ public class WrkDB {
     }
 
     /**
-     *
      * Cette méthode permet de se connecter à la base de données de
      * l'état-major. Elle demande en paramètre l'url de la connexion à la base
      * de données, le login et le mot de passe.
      *
-     * @param PU représente l'url pour la connexion à la base de données.
-     * @param login représente le nom d'utilisateur du visiteur voulant se
-     * connecter.
+     * @param PU       représente l'url pour la connexion à la base de données.
+     * @param login    représente le nom d'utilisateur du visiteur voulant se
+     *                 connecter.
      * @param password représente le mot de passe du visiteur voulant se
-     * connecter.
+     *                 connecter.
      * @return true si la connexion à la base de données s'est correctement
      * effectuée ou false.
      * @throws Exception si une quelconque erreur se produit.
@@ -73,9 +77,9 @@ public class WrkDB {
      * paramètre correspondent à un utilisateur de la base de données.
      *
      * @param username représente le login de l'utilisateur a rechercher dans la
-     * base de données.
+     *                 base de données.
      * @param password représente le mot de passe de l'utilisateur a rechercher
-     * dans la base de données.
+     *                 dans la base de données.
      * @return null si une erreur se produit ou un objet Utilisateur.
      * @throws SQLException si une erreur en rapport au SQL se produit.
      */

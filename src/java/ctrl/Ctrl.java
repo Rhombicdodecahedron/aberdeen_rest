@@ -1,12 +1,18 @@
 package ctrl;
 
 import beans.Utilisateur;
+
 import java.sql.SQLException;
+
 import wrk.Wrk;
 
 /**
+ * Classe Ctrl
+ * Cette classe permet de contacter les méthodes du worker principal de l'état-major.
  *
  * @author StellaA
+ * @version 1.0
+ * @project Aberdeen module 133
  */
 public class Ctrl {
 
@@ -16,7 +22,7 @@ public class Ctrl {
     private final Wrk refWrk;
 
     /**
-     * Constructeur de la classe WrkDB de l'état-major. Il définit les instances
+     * Constructeur de la classe WrkDB de l'état-major. Il défini les instances
      * de WrkLog, WrkDispatcher, WrkDataBase, WrkRobot et WrkServer
      */
     public Ctrl() {
@@ -24,16 +30,15 @@ public class Ctrl {
     }
 
     /**
-     *
      * Cette méthode permet de se connecter à la base de données de
      * l'état-major. Elle demande en paramètre l'url de la connexion à la base
      * de données, le login et le mot de passe.
      *
-     * @param pu représente l'url pour la connexion à la base de données.
-     * @param login représente le nom d'utilisateur du visiteur voulant se
-     * connecter.
+     * @param pu       représente l'url pour la connexion à la base de données.
+     * @param login    représente le nom d'utilisateur du visiteur voulant se
+     *                 connecter.
      * @param password représente le mot de passe du visiteur voulant se
-     * connecter.
+     *                 connecter.
      * @return true si la connexion à la base de données s'est correctement
      * effectuée ou false.
      * @throws Exception si une quelconque erreur se produit.
@@ -58,9 +63,9 @@ public class Ctrl {
      * paramètre correspondent à un utilisateur de la base de données.
      *
      * @param username représente le login de l'utilisateur a rechercher dans la
-     * base de données.
+     *                 base de données.
      * @param password représente le mot de passe de l'utilisateur a rechercher
-     * dans la base de données.
+     *                 dans la base de données.
      * @return null si une erreur se produit ou un objet Utilisateur.
      * @throws SQLException si une erreur en rapport au SQL se produit.
      */

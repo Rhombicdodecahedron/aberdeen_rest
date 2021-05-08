@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rest;
 
 import beans.Utilisateur;
@@ -18,10 +13,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 
+
 /**
- * REST Web Service
+ * Classe UserManagerAberdeen
+ * Cette classe permet recevoir les requêtes GET/POST/DELETE/PUT et de les traiter.
  *
  * @author StellaA
+ * @version 1.0
+ * @project Aberdeen module 133
  */
 @Path("ABERDEEN")
 public class UserManagerAberdeen {
@@ -35,13 +34,23 @@ public class UserManagerAberdeen {
     private final Ctrl refCtrl;
 
     /**
-     * Constructeur de la classe UserManagerAberdeen de l'état-major. Il définit
+     * Constructeur de la classe UserManagerAberdeen de l'état-major. Il défini
      * les instances de refCtrl.
      */
     public UserManagerAberdeen() {
         refCtrl = new Ctrl();
     }
 
+
+    /**
+     * Cette méthode permet de recevoir la requête GET pour la connexion de l'utilisateur. Elle demande en paramètres
+     * le login de l'utilisateur et le mot de passe. Elle va ensuite vérifier si les identifiants matchent par rapport
+     * au entrées dans la base de données. En fonction de ce résultat, un JSON sera retourné.
+     *
+     * @param username représente le nom de l'utilisateur qui souhaite se connecter.
+     * @param password représente le mot de passe de l'utilisateur souhaitant se connecter.
+     * @return un String contenant un object Utilisateur sous forme de JSON ou un message d'erreur.
+     */
     @GET
     @Path("connectUser/{username}/{password}")
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")

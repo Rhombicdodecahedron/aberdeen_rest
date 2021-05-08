@@ -1,11 +1,16 @@
 package wrk;
 
 import beans.Utilisateur;
+
 import java.sql.SQLException;
 
 /**
+ * Classe Wrk
+ * Cette classe permet de contacter les méthodes des sous-workers de l'état-major.
  *
  * @author StellaA
+ * @version 1.0
+ * @project Aberdeen module 133
  */
 public class Wrk {
 
@@ -15,7 +20,7 @@ public class Wrk {
     private final WrkDB wrkDB;
 
     /**
-     * Constructeur de la classe Wrk de l'état-major. Il définit les instances
+     * Constructeur de la classe Wrk de l'état-major. Il défini les instances
      * de wrkDB.
      */
     public Wrk() {
@@ -23,16 +28,15 @@ public class Wrk {
     }
 
     /**
-     *
      * Cette méthode permet de se connecter à la base de données de
      * l'état-major. Elle demande en paramètre l'url de la connexion à la base
      * de données, le login et le mot de passe.
      *
-     * @param pu représente l'url pour la connexion à la base de données.
-     * @param login représente le nom d'utilisateur du visiteur voulant se
-     * connecter.
+     * @param pu       représente l'url pour la connexion à la base de données.
+     * @param login    représente le nom d'utilisateur du visiteur voulant se
+     *                 connecter.
      * @param password représente le mot de passe du visiteur voulant se
-     * connecter.
+     *                 connecter.
      * @return true si la connexion à la base de données s'est correctement
      * effectuée ou false.
      * @throws Exception si une quelconque erreur se produit.
@@ -57,9 +61,9 @@ public class Wrk {
      * paramètre correspondent à un utilisateur de la base de données.
      *
      * @param username représente le login de l'utilisateur a rechercher dans la
-     * base de données.
+     *                 base de données.
      * @param password représente le mot de passe de l'utilisateur a rechercher
-     * dans la base de données.
+     *                 dans la base de données.
      * @return null si une erreur se produit ou un objet Utilisateur.
      * @throws SQLException si une erreur en rapport au SQL se produit.
      */

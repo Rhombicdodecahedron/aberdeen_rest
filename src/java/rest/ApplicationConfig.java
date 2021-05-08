@@ -4,8 +4,12 @@ import java.util.Set;
 import javax.ws.rs.core.Application;
 
 /**
+ * Classe ApplicationConfig
+ * Cette classe permet recevoir les requêtes et de les dispatch vers la classe UserManagerAberdeen.
  *
  * @author StellaA
+ * @version 1.0
+ * @project Aberdeen module 133
  */
 @javax.ws.rs.ApplicationPath("webresources")
 public class ApplicationConfig extends Application {
@@ -26,5 +30,5 @@ public class ApplicationConfig extends Application {
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(rest.UserManagerAberdeen.class);
     }
-    
+
 }
